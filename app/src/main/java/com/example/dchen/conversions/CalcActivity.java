@@ -151,7 +151,8 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                     leftEdit = (EditText) findViewById(R.id.editTextCurrent);
                     leftVal[0] = Double.parseDouble(leftEdit.getText().toString());
                     rightVal[0] = leftVal[0] / rightScale[0] * leftScale[0];
-                    rightText.setText(Double.toString(rightVal[0]));
+                    String retVal = String.format("%.2f", (rightVal[0]));
+                    rightText.setText(retVal);
                 } else if (option.equals("temp")) {
                     String left = leftSpinner.getSelectedItem().toString();
                     String right = rightSpinner.getSelectedItem().toString();
@@ -184,11 +185,11 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                                 break;
                         }
                     }
-                    rightText.setText(Double.toString(rightVal[0]));
+                    String retVal = String.format("%.2f", (rightVal[0]));
+                    rightText.setText(retVal);
                 }
             }
         });
-
         buttonBack = findViewById(R.id.imageButtonBack);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,7 +197,6 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                 openMainActivity();
             }
         });
-
     }
 
 
