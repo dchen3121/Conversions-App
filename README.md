@@ -13,8 +13,9 @@ Java, Android Studio
   4. Temperatures
 
 #### To Do
-Add functionality for clothing sizes
-Improve user interface
+Add functionality for clothing sizes  
+Include option to swap values from left to right  
+Improve user interface  
 
 
 ## Project
