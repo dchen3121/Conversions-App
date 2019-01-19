@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Conversions</string>
+    
+    <string-array name="massUnits">
+        <item>t (tonnes)</item>
+        <item>kg (kilograms)</item>
+        <item>g (grams)</item>
+        <item>lb (pounds)</item>
+        <item>oz (ounces)</item>
+    </string-array>
+
+    <string-array name="lengthUnits">
+        <item>km (kilometres)</item>
+        <item>m (metres)</item>
+        <item>cm (centimetres)</item>
+        <item>mm (millimetres)</item>
+        <item>mi (miles)</item>
+        <item>yd (yards)</item>
+        <item>ft (feet)</item>
+    </string-array>
+
+    <string-array name="timeUnits">
+        <item>weeks</item>
+        <item>days</item>
+        <item>hours</item>
+        <item>minutes</item>
+        <item>seconds</item>
+    </string-array>
+
+    <string-array name="tempUnits">
+        <item>°C (degrees Celsius)</item>
+        <item>°F (degrees Fahrenheit)</item>
+        <item>K (Kelvins)</item>
+    </string-array>
+
+    <string-array name="sizeUnits">
+        <item>N/A (work in progress)</item>
+    </string-array>
+
+
+</resources>
