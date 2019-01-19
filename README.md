@@ -13,10 +13,10 @@ Java, Android Studio
   4. Temperatures
 
 #### To Do
-[ ] Improve decimal formatting
-[ ] Add functionality for clothing sizes  
-[ ] Include option to swap values from left to right  
-[ ] Improve user interface  
+- [ ] Improve decimal formatting
+- [ ] Add functionality for clothing sizes  
+- [ ] Include option to swap values from left to right  
+- [ ] Improve user interface  
 
 
 ## Project
