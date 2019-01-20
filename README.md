@@ -15,11 +15,12 @@ Java, Android Studio
   2. Length
   3. Time
   4. Temperatures
+  5. Clothing sizes
 
 #### To Do
 - [x] Improve decimal formatting
 - [x] Add functionality for clothing sizes  
-- [ ] Include option to swap values from left to right  
+- [x] Include option to swap values from left to right  
 - [ ] Improve user interface  
 
 
