@@ -1,6 +1,10 @@
 # Conversions App
 A conversion app between units made with Java in Android Studio
 
+## Screenshots
+![Home Screen](home_screenshot.PNG)
+![Sample usage of the app](convert_screenshot.PNG)
+
 ## Tools Used
 Java, Android Studio
 
