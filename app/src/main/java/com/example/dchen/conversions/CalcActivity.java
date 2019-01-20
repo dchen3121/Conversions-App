@@ -64,12 +64,12 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             case "length":
                 ArrayAdapter<CharSequence> adapterLengthL =
                         ArrayAdapter.createFromResource
-                                (this, R.array.massUnits, android.R.layout.simple_spinner_item);
+                                (this, R.array.lengthUnits, android.R.layout.simple_spinner_item);
                 adapterLengthL.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 leftSpinner.setAdapter(adapterLengthL);
                 ArrayAdapter<CharSequence> adapterLengthR =
                         ArrayAdapter.createFromResource
-                                (this, R.array.massUnits, android.R.layout.simple_spinner_item);
+                                (this, R.array.lengthUnits, android.R.layout.simple_spinner_item);
                 adapterLengthR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 rightSpinner.setAdapter(adapterLengthR);
                 break;
@@ -161,7 +161,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                     if (left.equals(right)) {
                         rightVal[0] = leftVal[0];
                     } else {
-                        switch(left) {
+                        switch (left) {
                             case "°C (degrees Celsius)":
                                 if (right.equals("°F (degrees Fahrenheit)")) {
                                     rightVal[0] = leftVal[0] * 9 / 5 + 32;
@@ -186,6 +186,14 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                         }
                     }
                     String retVal = String.format("%.2f", (rightVal[0]));
+                    rightText.setText(retVal);
+                } else if (option.equals("size")) {
+                    leftScale[0] = textToScale(leftSpinner.getSelectedItem().toString());
+                    rightScale[0] = textToScale(rightSpinner.getSelectedItem().toString());
+                    leftEdit = (EditText) findViewById(R.id.editTextCurrent);
+                    leftVal[0] = Double.parseDouble(leftEdit.getText().toString());
+                    rightVal[0] = leftVal[0] - leftScale[0] + rightScale[0];
+                    String retVal = String.format("%.0f", (rightVal[0]));
                     rightText.setText(retVal);
                 }
             }
@@ -255,7 +263,21 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             case "weeks":
                 val = 3600 * 24 * 7;
                 break;
-
+            case "US & Canada":
+                val = 2;
+                break;
+            case "UK":
+                val = 4;
+                break;
+            case "Europe":
+                val = 32;
+                break;
+            case "Japan":
+                val = 5;
+                break;
+            case "Australia":
+                val = 6;
+                break;
             default:
                 break;
         }
