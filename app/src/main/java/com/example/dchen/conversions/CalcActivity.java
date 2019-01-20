@@ -21,7 +21,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     private Spinner leftSpinner, rightSpinner;
     private Button buttonConv;
     private ImageButton buttonBack;
-
+    private ImageButton buttonSwap;
 
     public void openMainActivity() {
         Intent intentMain = new Intent(this, MainActivity.class);
@@ -203,6 +203,23 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v) {
                 openMainActivity();
+            }
+        });
+        buttonSwap = findViewById(R.id.imageButtonSwap);
+        buttonSwap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp = leftEdit.getText().toString();
+                leftEdit.setText(rightText.getText().toString());
+                rightText.setText(temp);
+
+                leftSpinner = (Spinner) findViewById(R.id.spinnerLeft);
+                rightSpinner = (Spinner) findViewById(R.id.spinnerRight);
+
+                int index = ((ArrayAdapter) leftSpinner.getAdapter()).getPosition(rightSpinner.getSelectedItem().toString());
+                rightSpinner.setSelection(((ArrayAdapter) rightSpinner.getAdapter()).getPosition(leftSpinner.getSelectedItem().toString()));
+                leftSpinner.setSelection(index);
+
             }
         });
     }
